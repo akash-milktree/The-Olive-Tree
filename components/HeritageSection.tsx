@@ -4,7 +4,6 @@ import { LOGO_DATA_URL } from '../constants';
 
 const HeritageSection: React.FC = () => {
   const [sparklingIndices, setSparklingIndices] = useState<number[]>([]);
-  const [hoverIndices, setHoverIndices] = useState<number[]>([]);
   const scrollTimeout = useRef<number | null>(null);
 
   // Define grid dimensions for the sparkle background
@@ -39,35 +38,6 @@ const HeritageSection: React.FC = () => {
     };
   }, [totalStars]);
 
-  const handleStarHover = (id: number) => {
-    // Calculate row and column to find neighbors
-    const row = Math.floor(id / gridCols);
-    const col = id % gridCols;
-    const neighbors: number[] = [];
-    const radius = 1; // 3x3 area
-
-    for (let dr = -radius; dr <= radius; dr++) {
-      for (let dc = -radius; dc <= radius; dc++) {
-        const nr = row + dr;
-        const nc = col + dc;
-        // Check bounds
-        if (nr >= 0 && nr < gridRows && nc >= 0 && nc < gridCols) {
-          neighbors.push(nr * gridCols + nc);
-        }
-      }
-    }
-
-    // Adding an aesthetic delay before the sparkle triggers
-    setTimeout(() => {
-      setHoverIndices(prev => [...new Set([...prev, ...neighbors])]);
-      
-      // Remove the sparkle cluster after it has finished its animation cycle
-      setTimeout(() => {
-        setHoverIndices(prev => prev.filter(item => !neighbors.includes(item)));
-      }, 1200);
-    }, 150);
-  };
-
   const starGrid = useMemo(() => {
     const items = [];
     for (let r = 0; r < gridRows; r++) {
@@ -88,17 +58,16 @@ const HeritageSection: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none opacity-80">
         <div className="relative w-full h-full">
           {starGrid.map((star) => {
-            const isSparkling = sparklingIndices.includes(star.id) || hoverIndices.includes(star.id);
+            const isSparkling = sparklingIndices.includes(star.id);
             return (
               <div
                 key={star.id}
-                className="absolute p-4 pointer-events-auto cursor-none"
+                className="absolute p-4"
                 style={{
                   top: star.top,
                   left: star.left,
                   transform: 'translate(-50%, -50%)',
                 }}
-                onMouseEnter={() => handleStarHover(star.id)}
               >
                 <svg 
                   viewBox="0 0 10 10" 
