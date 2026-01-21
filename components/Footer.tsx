@@ -8,7 +8,6 @@ const DiamondIcon = ({ color = "#d4af37" }: { color?: string }) => (
 );
 
 const Footer: React.FC = () => {
-  // Escaped SVG for the diamond outlines to be used as a CSS background (matching NewsletterSection)
   const diamondPattern = `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='none' stroke='rgba(255,255,255,0.2)' stroke-width='0.5' /%3E%3Cpath d='M0 0 L50 50 L0 100' fill='none' stroke='rgba(255,255,255,0.2)' stroke-width='0.5' /%3E%3Cpath d='M100 0 L50 50 L100 100' fill='none' stroke='rgba(255,255,255,0.2)' stroke-width='0.5' /%3E%3C/svg%3E")`;
 
   return (
@@ -38,7 +37,7 @@ const Footer: React.FC = () => {
               </h2>
 
               <div className="pt-4">
-                <button className="relative px-12 py-4 border border-[#53663e]/40 hover:border-[#53663e] transition-all duration-500 rounded-sm">
+                <button className="relative px-12 py-4 border border-[#53663e]/40 hover:border-[#53663e] transition-all duration-1000 rounded-sm">
                   <span className="absolute inset-0.5 border border-[#53663e]/10 pointer-events-none" />
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#2c2c2c]">Book a Table</span>
                 </button>
@@ -50,8 +49,12 @@ const Footer: React.FC = () => {
               <ul className="space-y-4">
                 {['Home', 'Menus', 'Private Dining', 'Loyalty', 'Events', 'Our Story', 'News', 'Gift Cards', 'Careers'].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-lg md:text-xl serif text-[#53663e] hover:italic transition-all duration-300">
-                      {link}
+                    <a href="#" className="group/link relative text-lg md:text-xl serif text-[#53663e] block w-fit transition-transform duration-[800ms] cubic-bezier(0.2, 0.8, 0.2, 1) hover:translate-x-4 will-change-transform" style={{ transitionDelay: '500ms' }}>
+                      <div className="grid grid-cols-1 grid-rows-1 items-center">
+                        <span className="row-start-1 col-start-1 transition-all duration-[600ms] group-hover/link:opacity-0">{link}</span>
+                        <span className="row-start-1 col-start-1 italic transition-all duration-[600ms] opacity-0 group-hover/link:opacity-100">{link}</span>
+                        <span className="row-start-1 col-start-1 invisible italic pointer-events-none" aria-hidden="true">{link}</span>
+                      </div>
                     </a>
                   </li>
                 ))}
@@ -71,7 +74,7 @@ const Footer: React.FC = () => {
                   'Terms and Conditions'
                 ].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-xs text-gray-500 hover:text-[#53663e] transition-colors">
+                    <a href="#" className="text-xs text-gray-500 hover:text-[#53663e] transition-colors duration-500">
                       {link}
                     </a>
                   </li>
@@ -84,7 +87,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3 text-left lg:text-right mb-12">
                 {['Instagram', 'Facebook', 'TikTok'].map((social) => (
                   <li key={social}>
-                    <a href="#" className="text-xs text-gray-500 hover:text-[#53663e] transition-colors">
+                    <a href="#" className="text-xs text-gray-500 hover:text-[#53663e] transition-colors duration-500">
                       {social}
                     </a>
                   </li>
@@ -102,9 +105,9 @@ const Footer: React.FC = () => {
           <div className="mt-24 pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 tracking-wider space-y-4 md:space-y-0 uppercase">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-10">
               <span>© 2024 THE OLIVE TREE</span>
-              <a href="#" className="hover:text-gray-600 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-gray-600 transition-colors">Cookie Policy</a>
-              <a href="#" className="hover:text-gray-600 transition-colors">Sustainability</a>
+              <a href="#" className="hover:text-gray-600 transition-colors duration-500">Privacy Policy</a>
+              <a href="#" className="hover:text-gray-600 transition-colors duration-500">Cookie Policy</a>
+              <a href="#" className="hover:text-gray-600 transition-colors duration-500">Sustainability</a>
             </div>
             <div className="flex items-center space-x-1">
               <span>CREATED BY</span>
@@ -116,7 +119,7 @@ const Footer: React.FC = () => {
 
       {/* Reveal Section: Unified Parallax Pattern matching NewsletterSection */}
       <div className="relative h-[600px] overflow-hidden bg-[#3a472b] z-10">
-        {/* Diamond Outlines Layer - Fixed to sync */}
+        {/* Diamond Outlines Layer */}
         <div 
           className="absolute inset-0 pointer-events-none" 
           style={{
@@ -128,7 +131,7 @@ const Footer: React.FC = () => {
           }}
         />
         
-        {/* Geometric Color Gradients Layer - Fixed to sync */}
+        {/* Geometric Color Gradients Layer */}
         <div 
           className="absolute inset-0 opacity-40 pointer-events-none" 
           style={{

@@ -71,7 +71,6 @@ const LocationSection: React.FC = () => {
 
   return (
     <section className="relative px-6 md:px-12 lg:px-24 overflow-hidden bg-[#f5f1e9]">
-      {/* Background Texture: Mediterranean Limestone/Sandstone pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-20 pointer-events-none"
         style={{
@@ -79,13 +78,11 @@ const LocationSection: React.FC = () => {
         }}
       />
       
-      {/* Balanced Padding Container */}
       <div className="relative z-10 max-w-7xl mx-auto py-32 md:py-48 flex flex-col items-center">
         
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start mb-24 md:mb-32">
           
-          {/* Left Column: Information */}
-          <div className="lg:col-span-7 space-y-8 animate-[fade-in-left_1s_ease-out]">
+          <div className="lg:col-span-7 space-y-8 animate-[fade-in-left_1.5s_cubic-bezier(0.2,0.8,0.2,1)]">
             <div className="flex items-center space-x-3">
               <span className="text-[#b35d43] text-[10px]">◊</span>
               <h4 className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold">THE SOUTHAMPTON INSTITUTION</h4>
@@ -103,25 +100,23 @@ const LocationSection: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-12 pt-4">
-              <a href="#" className="group flex items-center space-x-4 text-[#53663e] text-xs uppercase tracking-[0.2em] font-bold border-b border-[#53663e]/20 pb-2 hover:border-[#53663e] transition-all">
+              <a href="#" className="group flex items-center space-x-4 text-[#53663e] text-xs uppercase tracking-[0.2em] font-bold border-b border-[#53663e]/20 pb-2 hover:border-[#53663e] transition-all duration-1000">
                 <span className="italic serif text-lg normal-case tracking-normal mr-2">View our menus</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:translate-x-3 transition-transform duration-1000" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              <a href="#" className="group flex items-center space-x-4 text-[#53663e] text-xs uppercase tracking-[0.2em] font-bold border-b border-[#53663e]/20 pb-2 hover:border-[#53663e] transition-all">
+              <a href="#" className="group flex items-center space-x-4 text-[#53663e] text-xs uppercase tracking-[0.2em] font-bold border-b border-[#53663e]/20 pb-2 hover:border-[#53663e] transition-all duration-1000">
                 <span className="italic serif text-lg normal-case tracking-normal mr-2">Reserve a table</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:translate-x-3 transition-transform duration-1000" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
             </div>
           </div>
 
-          {/* Right Column: Accordion-style Details */}
-          <div className="lg:col-span-5 animate-[fade-in-right_1s_ease-out]">
+          <div className="lg:col-span-5 animate-[fade-in-right_1.5s_cubic-bezier(0.2,0.8,0.2,1)]">
             <div className="bg-white/60 backdrop-blur-md relative border-l border-r border-[#b35d43]/20 shadow-sm">
-              {/* Pattern Border Top */}
               <div className="h-4 w-full opacity-30 border-t border-[#b35d43]/10" style={{ 
                 backgroundImage: 'radial-gradient(circle, #b35d43 1px, transparent 1px)', 
                 backgroundSize: '12px 12px' 
@@ -132,12 +127,11 @@ const LocationSection: React.FC = () => {
                   <div key={section.id} className="border-b border-[#b35d43]/10 last:border-b-0">
                     <button 
                       onClick={() => setOpenSection(openSection === section.id ? null : section.id)}
-                      className="w-full px-8 py-7 flex items-center justify-between group transition-colors hover:bg-white/40"
+                      className="w-full px-8 py-7 flex items-center justify-between group transition-colors duration-1000 hover:bg-white/40"
                     >
                       <span className="text-lg serif text-gray-800 tracking-wide">{section.title}</span>
                       <div className="relative w-8 h-8 flex items-center justify-center">
-                        {/* Diamond Border */}
-                        <div className={`absolute inset-0 border border-[#b35d43]/30 rotate-45 transition-transform duration-700 ${openSection === section.id ? 'rotate-[225deg]' : 'group-hover:rotate-[135deg]'}`} />
+                        <div className={`absolute inset-0 border border-[#b35d43]/30 rotate-45 transition-transform duration-[1200ms] ${openSection === section.id ? 'rotate-[225deg]' : 'group-hover:rotate-[135deg]'}`} />
                         <div className="relative text-[#b35d43]">
                           {openSection === section.id ? (
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -151,14 +145,13 @@ const LocationSection: React.FC = () => {
                         </div>
                       </div>
                     </button>
-                    <div className={`px-8 overflow-hidden transition-all duration-700 ease-in-out ${openSection === section.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className={`px-8 overflow-hidden transition-all duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1) ${openSection === section.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                       {section.content}
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* Pattern Border Bottom */}
               <div className="h-4 w-full opacity-30 border-b border-[#b35d43]/10" style={{ 
                 backgroundImage: 'radial-gradient(circle, #b35d43 1px, transparent 1px)', 
                 backgroundSize: '12px 12px' 
@@ -167,8 +160,7 @@ const LocationSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Transition ornament now integrated into the flex flow for balanced padding */}
-        <div className="flex flex-col items-center opacity-0 animate-[fade-in-up_1s_ease-out_0.5s_forwards]">
+        <div className="flex flex-col items-center opacity-0 animate-[fade-in-up_1.8s_cubic-bezier(0.2,0.8,0.2,1)_0.8s_forwards]">
           <div className="w-px h-24 bg-gradient-to-t from-[#53663e] to-transparent opacity-20 mb-8" />
           <div className="text-center space-y-4">
             <svg viewBox="0 0 24 24" className="w-6 h-6 mx-auto text-[#53663e]" fill="currentColor">
@@ -182,15 +174,15 @@ const LocationSection: React.FC = () => {
 
       <style>{`
         @keyframes fade-in-left {
-          from { opacity: 0; transform: translateX(-40px); }
+          from { opacity: 0; transform: translateX(-60px); }
           to { opacity: 1; transform: translateX(0); }
         }
         @keyframes fade-in-right {
-          from { opacity: 0; transform: translateX(40px); }
+          from { opacity: 0; transform: translateX(60px); }
           to { opacity: 1; transform: translateX(0); }
         }
         @keyframes fade-in-up {
-          from { opacity: 0; transform: translateY(20px); }
+          from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>

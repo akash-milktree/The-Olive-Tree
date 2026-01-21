@@ -23,73 +23,88 @@ const PrivateDiningSection: React.FC = () => {
           <span className="italic">enjoy timeless elegance</span>
         </h2>
         
-        <button className="px-10 py-3.5 border border-[#53663e]/40 text-[#2c2c2c] text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-[#53663e] hover:text-white transition-all duration-500 rounded-sm">
+        <button className="px-10 py-3.5 border border-[#53663e]/40 text-[#2c2c2c] text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-[#53663e] hover:text-white transition-all duration-700 rounded-sm">
           Reserve your table
         </button>
       </div>
 
       {/* Main Split Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[800px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[800px] gap-8 lg:gap-0">
         {/* Left Column: Image */}
-        <div className="relative h-[500px] lg:h-full flex items-center justify-center lg:justify-end lg:pr-24 px-6">
-          <div className="w-full max-w-lg aspect-[3/4] lg:h-[70%] lg:w-auto relative group overflow-hidden">
+        <div className="relative h-[500px] lg:h-full flex items-center justify-center lg:justify-end lg:pr-12 px-6">
+          <div className="w-full max-w-lg aspect-[3/4] lg:h-[80%] lg:w-auto relative group overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800" 
               alt="Private Dining at The Olive Tree" 
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-[5000ms] cubic-bezier(0.2, 0.8, 0.2, 1) group-hover:scale-110 will-change-transform"
             />
           </div>
         </div>
 
-        {/* Right Column: Decorative Green Block */}
-        <div className="bg-[#53663e] p-8 md:p-12 lg:p-24 flex items-center justify-center relative">
-          {/* Decorative White Border Frame with Concave Corner Accents */}
-          <div className="absolute inset-8 md:inset-12 lg:inset-16 border border-white/20 pointer-events-none">
-             {/* Corner Flourishes */}
-             <div className="absolute -top-1 -left-1 w-8 h-8">
-               <div className="absolute top-0 left-0 w-full h-full border-t border-l border-white/60 rounded-tl-2xl" />
-             </div>
-             <div className="absolute -top-1 -right-1 w-8 h-8">
-               <div className="absolute top-0 right-0 w-full h-full border-t border-r border-white/60 rounded-tr-2xl" />
-             </div>
-             <div className="absolute -bottom-1 -left-1 w-8 h-8">
-               <div className="absolute bottom-0 left-0 w-full h-full border-b border-l border-white/60 rounded-bl-2xl" />
-             </div>
-             <div className="absolute -bottom-1 -right-1 w-8 h-8">
-               <div className="absolute bottom-0 right-0 w-full h-full border-b border-r border-white/60 rounded-br-2xl" />
-             </div>
-             {/* Small dots in corners like Ivy */}
-             <div className="absolute top-2 left-2 w-1 h-1 bg-white/40 rounded-full" />
-             <div className="absolute top-2 right-2 w-1 h-1 bg-white/40 rounded-full" />
-             <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/40 rounded-full" />
-             <div className="absolute bottom-2 right-2 w-1 h-1 bg-white/40 rounded-full" />
-          </div>
+        {/* Right Column: Decorative Green Block with Newsletter-style Mask */}
+        <div className="flex items-center justify-center lg:justify-start lg:pl-12 px-6">
+          <div 
+            className="bg-[#53663e] w-full max-w-lg aspect-[4/5] lg:h-[80%] lg:w-full p-8 md:p-12 lg:p-16 flex items-center justify-center relative"
+            style={{
+              mask: 'radial-gradient(50px at 0 0, #0000 98%, #000) 0 0, radial-gradient(50px at 100% 100%, #0000 98%, #000) 100% 100%, radial-gradient(50px at 100% 0, #0000 98%, #000) 100% 0, radial-gradient(50px at 0 100%, #0000 98%, #000) 0 100%',
+              maskComposite: 'intersect',
+              WebkitMask: 'radial-gradient(50px at 0 0, #0000 98%, #000) 0 0, radial-gradient(50px at 100% 100%, #0000 98%, #000) 100% 100%, radial-gradient(50px at 100% 0, #0000 98%, #000) 100% 0, radial-gradient(50px at 0 100%, #0000 98%, #000) 0 100%',
+              WebkitMaskComposite: 'destination-in'
+            }}
+          >
+            {/* Internal Decorative Border */}
+            <div className="absolute inset-8 md:inset-10 lg:inset-12 pointer-events-none">
+               {/* Corner Arcs */}
+               <svg className="absolute top-0 left-0 w-12 h-12 text-white/30" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                 <path d="M 100 0 A 100 100 0 0 0 0 100" strokeWidth="1" />
+               </svg>
+               <svg className="absolute top-0 right-0 w-12 h-12 text-white/30 rotate-90" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                 <path d="M 100 0 A 100 100 0 0 0 0 100" strokeWidth="1" />
+               </svg>
+               <svg className="absolute bottom-0 left-0 w-12 h-12 text-white/30 -rotate-90" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                 <path d="M 100 0 A 100 100 0 0 0 0 100" strokeWidth="1" />
+               </svg>
+               <svg className="absolute bottom-0 right-0 w-12 h-12 text-white/30 rotate-180" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                 <path d="M 100 0 A 100 100 0 0 0 0 100" strokeWidth="1" />
+               </svg>
 
-          <div className="max-w-md text-center space-y-10 relative z-10">
-            <div className="flex items-center justify-center space-x-4">
-              <DiamondIcon />
-              <span className="text-[10px] uppercase tracking-[0.4em] text-white/80 font-bold">PRIVATE DINING AT THE OLIVE TREE</span>
-              <DiamondIcon />
+               <div className="absolute top-0 left-12 right-12 h-px bg-white/30" />
+               <div className="absolute bottom-0 left-12 right-12 h-px bg-white/30" />
+               <div className="absolute left-0 top-12 bottom-12 w-px bg-white/30" />
+               <div className="absolute right-0 top-12 bottom-12 w-px bg-white/30" />
+
+               <div className="absolute top-0 left-0 w-1.5 h-1.5 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2" />
+               <div className="absolute top-0 right-0 w-1.5 h-1.5 bg-white/50 rounded-full translate-x-1/2 -translate-y-1/2" />
+               <div className="absolute bottom-0 left-0 w-1.5 h-1.5 bg-white/50 rounded-full -translate-x-1/2 translate-y-1/2" />
+               <div className="absolute bottom-0 right-0 w-1.5 h-1.5 bg-white/50 rounded-full translate-x-1/2 translate-y-1/2" />
             </div>
 
-            <h3 className="text-4xl md:text-5xl serif text-white leading-tight">
-              Celebrate at <br />
-              <span className="italic">The Olive Tree</span>
-            </h3>
+            <div className="max-w-xs md:max-w-sm text-center space-y-8 md:space-y-12 relative z-10 px-4">
+              <div className="flex items-center justify-center space-x-3">
+                <DiamondIcon />
+                <span className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] text-white/80 font-bold">PRIVATE DINING</span>
+                <DiamondIcon />
+              </div>
 
-            <p className="text-white/80 text-sm md:text-base font-light leading-relaxed">
-              Experience bespoke dining in our private dining rooms, designed to make every occasion feel special. From intimate family reunions to corporate celebrations, our team ensures every detail is handled with Mediterranean warmth.
-            </p>
+              <h3 className="text-3xl md:text-5xl serif text-white leading-tight">
+                Celebrate at <br />
+                <span className="italic">The Olive Tree</span>
+              </h3>
 
-            <a href="#" className="group/link flex items-end justify-between text-white transition-all relative pb-4 pt-6">
-              <span className="italic serif text-2xl md:text-3xl normal-case tracking-normal">
-                Discover private dining
-              </span>
-              <div className="flex-1 border-b border-white/20 group-hover/link:border-white transition-colors mx-4 mb-2.5" />
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transform group-hover/link:translate-x-2 transition-transform duration-300 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+              <p className="text-white/80 text-sm md:text-base font-light leading-relaxed">
+                Experience bespoke dining in our private dining rooms, designed to make every occasion feel special. From intimate reunions to grand celebrations.
+              </p>
+
+              <a href="#" className="group/link flex items-end justify-between text-white transition-all duration-1000 relative pb-4 pt-6">
+                <span className="italic serif text-2xl md:text-3xl normal-case tracking-normal">
+                  Discover private dining
+                </span>
+                <div className="flex-1 border-b border-white/20 group-hover/link:border-white transition-all duration-1000 mx-4 mb-2.5" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transform group-hover/link:translate-x-3 transition-transform duration-[1000ms] mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
