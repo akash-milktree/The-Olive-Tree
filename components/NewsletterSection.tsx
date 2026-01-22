@@ -10,8 +10,8 @@ const NewsletterSection: React.FC = () => {
       {/* Unified Parallax Background */}
       <div className="absolute inset-0 z-0 bg-[#3a472b]">
         {/* Diamond Outlines Layer - Fixed to sync with the colors */}
-        <div 
-          className="absolute inset-0 pointer-events-none" 
+        <div
+          className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage: diamondPattern,
             backgroundPosition: '0 0',
@@ -20,10 +20,10 @@ const NewsletterSection: React.FC = () => {
             backgroundAttachment: 'fixed'
           }}
         />
-        
+
         {/* Geometric Color Gradients Layer - Fixed to sync with the outlines */}
-        <div 
-          className="absolute inset-0 opacity-40 pointer-events-none" 
+        <div
+          className="absolute inset-0 opacity-40 pointer-events-none"
           style={{
             backgroundImage: `
               linear-gradient(135deg, #2c3520 25%, transparent 25%), 
@@ -39,7 +39,7 @@ const NewsletterSection: React.FC = () => {
       </div>
 
       {/* The Central White Container with Concave Cutout Corners */}
-      <div 
+      <div
         className="relative z-10 w-full max-w-6xl bg-white shadow-2xl py-16 px-6 md:py-24 md:px-20"
         style={{
           mask: 'radial-gradient(50px at 0 0, #0000 98%, #000) 0 0, radial-gradient(50px at 100% 100%, #0000 98%, #000) 100% 100%, radial-gradient(50px at 100% 0, #0000 98%, #000) 100% 0, radial-gradient(50px at 0 100%, #0000 98%, #000) 0 100%',
@@ -57,7 +57,7 @@ const NewsletterSection: React.FC = () => {
 
           <h2 className="text-3xl md:text-5xl lg:text-5xl serif text-[#2c2c2c] leading-tight font-light">
             Sign up to our newsletter to receive <br />
-            <span className="italic text-[#3a472b]">special moments</span> before anyone else.
+            <span className="italic text-[#3a472b]">special moments before anyone else.</span>
           </h2>
 
           <form className="space-y-10 text-left">
