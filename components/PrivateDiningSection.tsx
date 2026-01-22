@@ -47,7 +47,7 @@ const PrivateDiningSection: React.FC = () => {
               <div className="w-1.5 h-1.5 border border-white/40 rotate-45" />
             </div>
 
-            <h3 className="text-4xl md:text-6xl lg:text-7xl serif text-white leading-[1.1] font-light">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl serif text-white leading-[1.1] font-light">
               Celebrate at <br />
               <span className="italic">The Olive Tree</span>
             </h3>
