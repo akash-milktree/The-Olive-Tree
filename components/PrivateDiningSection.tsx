@@ -3,10 +3,10 @@ import React from 'react';
 
 const PrivateDiningSection: React.FC = () => {
   return (
-    <section className="bg-[#f9f7f2] pt-20 overflow-hidden">
+    <section className="bg-[#f9f7f2] pt-24 overflow-hidden">
       {/* Top Centered Content: Refined Typography & Spacing */}
-      <div className="text-center mb-12 px-6 animate-[fade-in_1.5s_ease-out_forwards]">
-        <div className="flex items-center justify-center space-x-4 mb-4">
+      <div className="text-center mb-24 lg:mb-32 px-6 animate-[fade-in_1.5s_ease-out_forwards]">
+        <div className="flex items-center justify-center space-x-4 mb-6">
           <svg width="6" height="6" viewBox="0 0 24 24" fill="none" className="text-[#53663e] rotate-45">
             <rect width="24" height="24" stroke="currentColor" strokeWidth="2" />
           </svg>
@@ -22,24 +22,19 @@ const PrivateDiningSection: React.FC = () => {
         </h2>
       </div>
 
-      {/* Main Split Content: Full Bleed Right and Bottom */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-stretch">
-        {/* Left Column: Image (Centred portrait with refined margin) */}
-        <div className="flex items-center justify-center lg:justify-end lg:pr-20 px-8 pb-12 lg:pb-24">
-          <div className="w-full max-w-[480px] aspect-[4/5] shadow-[20px_20px_60px_rgba(0,0,0,0.05)] relative overflow-hidden animate-[fade-in-left_2s_cubic-bezier(0.2,0.8,0.2,1)_forwards]">
-            <img
-              src="/new_interior_2025/PHOTO-2025-07-28-10-50-39.jpg"
-              alt="The Olive Tree Exterior"
-              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[8000ms] ease-out"
-            />
-          </div>
+      {/* Main Split Content: Edge-to-Edge Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full items-stretch gap-0">
+        {/* Left Column: Full Bleed Image */}
+        <div className="relative h-[500px] lg:h-auto overflow-hidden animate-[fade-in-left_2s_cubic-bezier(0.2,0.8,0.2,1)_forwards]">
+          <img
+            src="/new_interior_2025/PHOTO-2025-07-28-10-50-39.jpg"
+            alt="The Olive Tree Exterior"
+            className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[8000ms] ease-out"
+          />
         </div>
 
-        {/* Right Column: Full Bleed Green Section with Refined Content Spacing */}
-        <div className="bg-[#53663e] flex items-center justify-center relative shadow-[-20px_0_50px_rgba(0,0,0,0.05)] animate-[fade-in-right_2s_cubic-bezier(0.2,0.8,0.2,1)_forwards] px-12 py-20 lg:py-32">
-
-          {/* Decorative elements removed as per request */}
-
+        {/* Right Column: Full Bleed Green Section */}
+        <div className="bg-[#53663e] flex items-center justify-center relative shadow-[-20px_0_50px_rgba(0,0,0,0.05)] animate-[fade-in-right_2s_cubic-bezier(0.2,0.8,0.2,1)_forwards] px-12 py-24 lg:py-40">
           <div className="max-w-md text-center space-y-10 relative z-10 px-4">
             <div className="flex items-center justify-center space-x-3 mb-2">
               <div className="w-1.5 h-1.5 border border-white/40 rotate-45" />
