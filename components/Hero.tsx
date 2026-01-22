@@ -11,15 +11,15 @@ const Hero: React.FC = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center">
       {/* Background Image: Extended animation timing for ultimate smoothness */}
-      <div 
+      <div
         className="absolute inset-0 z-0 scale-105 animate-[subtle-zoom_30s_infinite_alternate] will-change-transform"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")',
+          backgroundImage: 'url("/hero-bg.jpg")',
           backgroundPosition: 'center',
           backgroundSize: 'cover'
         }}
       />
-      
+
       {/* Soft Dark Overlay for Contrast */}
       <div className="absolute inset-0 z-10 bg-black/40" />
 
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           A Taste of the <br className="hidden md:block" />
           <span className="italic">Mediterranean</span>
         </h2>
-        
+
         <p className="text-sm md:text-lg text-white/90 font-light tracking-wide mb-10 max-w-2xl mx-auto leading-relaxed">
           Experience warm hospitality and traditional family recipes in our sun-drenched Southampton bistro. From fresh seafood to hand-picked olives, every dish tells a story.
         </p>
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
             <span className="relative z-10">Book a Table</span>
             <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-[700ms] cubic-bezier(0.4, 0, 0.2, 1)" />
           </button>
-          
+
           <button className="group flex items-center space-x-2 text-white text-[11px] uppercase tracking-[0.2em] font-bold border-b border-white/30 pb-1 hover:border-white transition-all duration-[700ms] cubic-bezier(0.4, 0, 0.2, 1)">
             <span>View our Menus</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 group-hover:translate-x-2 transition-transform duration-[700ms]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

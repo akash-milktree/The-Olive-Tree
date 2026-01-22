@@ -11,28 +11,28 @@ const EventsGrid: React.FC = () => {
   const events = [
     {
       title: "Mediterranean Weddings",
-      image: "https://images.unsplash.com/photo-1519225495810-758b63300051?auto=format&fit=crop&q=80&w=800",
+      image: "/new_interior_2025/PHOTO-2025-07-28-10-50-39.jpg",
       description: "Celebrate your special day with authentic coastal charm and a bespoke Mediterranean banquet.",
       cta: "Plan your day",
       link: "#"
     },
     {
       title: "Private Dining Room",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+      image: "/new_interior_2025/PHOTO-2025-07-28-10-50-40(3).jpg",
       description: "Our intimate rustic room is the perfect setting for birthdays, anniversaries, and family reunions.",
       cta: "Explore the room",
       link: "#"
     },
     {
       title: "Corporate Gatherings",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800",
+      image: "/new_interior_2025/PHOTO-2025-07-28-10-50-41(7).jpg",
       description: "From team lunches to professional celebrations, we provide the perfect blend of business and leisure.",
       cta: "Book an event",
       link: "#"
     },
     {
       title: "Live Terrace Sessions",
-      image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=800",
+      image: "/new_interior_2025/PHOTO-2025-07-28-10-50-41(4).jpg",
       description: "Experience soulful melodies and al fresco dining under the stars during our weekend terrace sessions.",
       cta: "View calendar",
       link: "#"
@@ -80,8 +80,8 @@ const EventsGrid: React.FC = () => {
               </h3>
 
               <div className="relative overflow-hidden aspect-[4/5] bg-gray-100">
-                <img 
-                  src={event.image} 
+                <img
+                  src={event.image}
                   alt={event.title}
                   className="w-full h-full object-cover transition-all duration-[3000ms] cubic-bezier(0.2, 0.8, 0.2, 1) group-hover:scale-110 group-hover:opacity-90"
                 />
@@ -96,11 +96,11 @@ const EventsGrid: React.FC = () => {
                   <span className="italic serif text-2xl md:text-3xl normal-case tracking-normal transition-all duration-1000">
                     {event.cta}
                   </span>
-                  
+
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 transform group-hover/link:translate-x-3 transition-transform duration-1000 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                  
+
                   <div className="absolute bottom-0 left-0 w-full h-px bg-[#53663e]/10 group-hover/link:bg-[#53663e] transition-all duration-1000" />
                 </a>
               </div>

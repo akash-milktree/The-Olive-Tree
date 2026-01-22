@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { LOGO_DATA_URL } from '../constants';
 
 const HeritageSection: React.FC = () => {
   const [sparklingIndices, setSparklingIndices] = useState<number[]>([]);
@@ -22,9 +21,9 @@ const HeritageSection: React.FC = () => {
       for (let i = 0; i < count; i++) {
         newSparkles.push(Math.floor(Math.random() * totalStars));
       }
-      
+
       setSparklingIndices(prev => [...new Set([...prev, ...newSparkles])].slice(-15));
-      
+
       if (scrollTimeout.current) window.clearTimeout(scrollTimeout.current);
       scrollTimeout.current = window.setTimeout(() => setSparklingIndices([]), 600);
     };
@@ -67,13 +66,12 @@ const HeritageSection: React.FC = () => {
                   transform: 'translate(-50%, -50%)',
                 }}
               >
-                <svg 
-                  viewBox="0 0 10 10" 
-                  className={`w-2.5 h-2.5 md:w-3 md:h-3 transition-[opacity,transform,color] duration-[800ms] ease-out will-change-transform ${
-                    isSparkling 
-                      ? 'text-white scale-[2] opacity-100 rotate-90' 
-                      : 'text-white/20 opacity-20 rotate-0'
-                  }`}
+                <svg
+                  viewBox="0 0 10 10"
+                  className={`w-2.5 h-2.5 md:w-3 md:h-3 transition-[opacity,transform,color] duration-[800ms] ease-out will-change-transform ${isSparkling
+                    ? 'text-white scale-[2] opacity-100 rotate-90'
+                    : 'text-white/20 opacity-20 rotate-0'
+                    }`}
                 >
                   <path d="M5 0L5.6 4.4L10 5L5.6 5.6L5 10L4.4 5.6L0 5L4.4 4.4Z" fill="currentColor" />
                 </svg>
@@ -91,9 +89,9 @@ const HeritageSection: React.FC = () => {
         </div>
 
         <div className="mb-14 w-40 h-40 md:w-56 md:h-56 opacity-0 animate-[fade-in_1.5s_cubic-bezier(0.2,0.8,0.2,1)_0.2s_forwards] flex items-center justify-center">
-          <img 
-            src={LOGO_DATA_URL} 
-            alt="The Olive Tree Logo" 
+          <img
+            src="/logo.png"
+            alt="The Olive Tree Logo"
             className="w-full h-full object-contain drop-shadow-xl"
           />
         </div>

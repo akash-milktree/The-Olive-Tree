@@ -15,15 +15,15 @@ const Footer: React.FC = () => {
       {/* Main Footer Wrapper */}
       <div className="relative z-20 bg-[#f9f7f2] overflow-hidden shadow-[0_-10px_30px_rgba(0,0,0,0.03)]">
         {/* Top Decorative Border */}
-        <div className="h-4 w-full opacity-20 border-t border-[#b35d43]/20" style={{ 
-          backgroundImage: 'radial-gradient(circle, #b35d43 1px, transparent 1px)', 
-          backgroundSize: '12px 12px' 
+        <div className="h-4 w-full opacity-20 border-t border-[#b35d43]/20" style={{
+          backgroundImage: 'radial-gradient(circle, #b35d43 1px, transparent 1px)',
+          backgroundSize: '12px 12px'
         }} />
 
         {/* Main Footer Content */}
         <div className="w-full px-6 md:px-12 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
-            
+
             {/* Left Block: Brand Statement & Booking */}
             <div className="lg:col-span-5 space-y-10">
               <div className="flex items-center space-x-3">
@@ -64,13 +64,13 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-3">
               <ul className="space-y-3">
                 {[
-                  'Modern Slavery Statement', 
-                  'Gender Pay Gap', 
-                  'FAQs', 
-                  'Contact', 
-                  'Community Foundation', 
-                  'Taxation', 
-                  'Tipping Policy', 
+                  'Modern Slavery Statement',
+                  'Gender Pay Gap',
+                  'FAQs',
+                  'Contact',
+                  'Community Foundation',
+                  'Taxation',
+                  'Tipping Policy',
                   'Terms and Conditions'
                 ].map((link) => (
                   <li key={link}>
@@ -95,8 +95,11 @@ const Footer: React.FC = () => {
               </ul>
 
               <div className="text-left lg:text-right">
-                <h3 className="text-2xl font-bold tracking-[0.3em] text-[#53663e]">THE OLIVE TREE</h3>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-gray-400 mt-1">Southampton</p>
+                <img
+                  src="/footer-logo.png"
+                  alt="The Olive Tree Logo"
+                  className="h-24 md:h-32 w-auto object-contain"
+                />
               </div>
             </div>
           </div>
@@ -110,8 +113,8 @@ const Footer: React.FC = () => {
               <a href="#" className="hover:text-gray-600 transition-colors duration-500">Sustainability</a>
             </div>
             <div className="flex items-center space-x-1">
-              <span>CREATED BY</span>
-              <span className="font-bold text-gray-500">A REFINED HALF TEAM</span>
+              <span>WEBSITE BY</span>
+              <a href="https://milktreeagency.com" target="_blank" rel="noopener noreferrer" className="font-bold text-gray-500 hover:text-[#53663e] transition-colors duration-500">MILKTREE AGENCY</a>
             </div>
           </div>
         </div>
@@ -120,8 +123,8 @@ const Footer: React.FC = () => {
       {/* Reveal Section: Unified Parallax Pattern matching NewsletterSection */}
       <div className="relative h-[600px] overflow-hidden bg-[#3a472b] z-10">
         {/* Diamond Outlines Layer */}
-        <div 
-          className="absolute inset-0 pointer-events-none" 
+        <div
+          className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage: diamondPattern,
             backgroundPosition: '0 0',
@@ -130,10 +133,10 @@ const Footer: React.FC = () => {
             backgroundAttachment: 'fixed'
           }}
         />
-        
+
         {/* Geometric Color Gradients Layer */}
-        <div 
-          className="absolute inset-0 opacity-40 pointer-events-none" 
+        <div
+          className="absolute inset-0 opacity-40 pointer-events-none"
           style={{
             backgroundImage: `
               linear-gradient(135deg, #2c3520 25%, transparent 25%), 

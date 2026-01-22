@@ -17,22 +17,22 @@ const MenuShowcase: React.FC = () => {
   return (
     <section className="relative w-full h-[80vh] md:h-screen overflow-hidden group bg-[#f2efe9]">
       {/* Background Image: Ultimate slow-motion cinematic zoom */}
-      <div 
+      <div
         className="absolute inset-0 z-0 transition-transform duration-[8000ms] cubic-bezier(0.2, 0, 0.2, 1) group-hover:scale-110 will-change-transform"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&q=80&w=2000")',
+          backgroundImage: 'url("/menus-bg.jpg")',
           backgroundPosition: 'center',
           backgroundSize: 'cover'
         }}
       />
-      
+
       {/* Dark overlay for contrast */}
       <div className="absolute inset-0 z-10 bg-black/30 md:bg-black/20" />
 
       {/* Content Container */}
       <div className="relative z-20 h-full w-full px-6 md:px-12 flex items-center justify-start">
         <div className="relative p-8 md:p-14 lg:p-16 w-full max-w-3xl animate-[fade-in-left_2.5s_cubic-bezier(0.2,0.8,0.2,1)] bg-black/10 backdrop-blur-[2px]">
-          
+
           {/* Thin Decorative Border Frame */}
           <div className="absolute inset-0 border border-white/20 m-2 md:m-4 pointer-events-none">
             <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-[#b35d43]/80" />
@@ -61,19 +61,19 @@ const MenuShowcase: React.FC = () => {
                     {/* Layer 1: Normal Style - Immediate Cross-fade (Phase 1) */}
                     <span className={`
                       row-start-1 col-start-1 transition-all duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1)
-                      ${item.italicDefault 
-                        ? 'opacity-0 scale-95 group-hover/link:opacity-100 group-hover/link:scale-100' 
+                      ${item.italicDefault
+                        ? 'opacity-0 scale-95 group-hover/link:opacity-100 group-hover/link:scale-100'
                         : 'opacity-100 scale-100 group-hover/link:opacity-0 group-hover/link:scale-95'
                       }
                     `}>
                       {item.label}
                     </span>
-                    
+
                     {/* Layer 2: Italic Style - Immediate Cross-fade (Phase 1) */}
                     <span className={`
                       row-start-1 col-start-1 italic transition-all duration-[1000ms] cubic-bezier(0.4, 0, 0.2, 1)
-                      ${item.italicDefault 
-                        ? 'opacity-100 scale-100 group-hover/link:opacity-0 group-hover/link:scale-95' 
+                      ${item.italicDefault
+                        ? 'opacity-100 scale-100 group-hover/link:opacity-0 group-hover/link:scale-95'
                         : 'opacity-0 scale-95 group-hover/link:opacity-100 group-hover/link:scale-100'
                       }
                     `}>
@@ -92,7 +92,7 @@ const MenuShowcase: React.FC = () => {
             {/* Footer Link - Same sequenced logic */}
             <div className="pt-6">
               <a href="#" className="group flex items-center space-x-6 text-white text-xs uppercase tracking-[0.3em] font-bold pb-3 border-b border-white/30 hover:border-white transition-all duration-[1000ms] hover:translate-x-6 w-fit"
-                 style={{ transitionDelay: '600ms' }}>
+                style={{ transitionDelay: '600ms' }}>
                 <span className="italic serif text-xl normal-case tracking-normal">All our menus</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:translate-x-4 transition-transform duration-[1000ms]" style={{ transitionDelay: '600ms' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
