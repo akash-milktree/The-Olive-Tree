@@ -96,7 +96,7 @@ const HeritageSection: React.FC = () => {
           />
         </div>
 
-        <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed tracking-[0.05em] uppercase mb-20 max-w-4xl opacity-0 animate-[fade-in_1.5s_cubic-bezier(0.2,0.8,0.2,1)_0.4s_forwards]">
+        <h3 className="text-white text-xl md:text-2xl lg:text-4xl font-normal leading-relaxed tracking-[0.05em] uppercase mb-12 md:mb-20 max-w-4xl opacity-0 animate-[fade-in_1.5s_cubic-bezier(0.2,0.8,0.2,1)_0.4s_forwards] px-4 text-center">
           The Olive Tree is a must-visit dining destination for those seeking a taste of the Mediterranean in Southampton. Located on historic Oxford Street, we offer a menu filled with diverse and authentic dishes.
         </h3>
 

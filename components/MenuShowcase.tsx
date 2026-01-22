@@ -54,7 +54,7 @@ const MenuShowcase: React.FC = () => {
                 <a
                   key={item.label}
                   href="#"
-                  className="group/link relative flex flex-col w-fit text-3xl md:text-5xl lg:text-6xl text-white serif tracking-tight drop-shadow-lg transition-transform duration-[1200ms] cubic-bezier(0.2, 0.8, 0.2, 1) hover:translate-x-12 opacity-90 hover:opacity-100 will-change-transform"
+                  className="group/link relative flex flex-col w-fit text-2xl md:text-5xl lg:text-6xl text-white serif tracking-tight drop-shadow-lg transition-transform duration-[1200ms] cubic-bezier(0.2, 0.8, 0.2, 1) hover:translate-x-12 opacity-90 hover:opacity-100 will-change-transform"
                   style={{ transitionDelay: '1000ms' }} // Phase 2: Start moving after Phase 1 is done
                 >
                   <div className="grid grid-cols-1 grid-rows-1 items-center">

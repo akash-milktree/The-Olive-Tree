@@ -55,7 +55,7 @@ const NewsletterSection: React.FC = () => {
             </svg>
           </div>
 
-          <h2 className="text-3xl md:text-5xl lg:text-5xl serif text-[#2c2c2c] leading-tight font-light">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl serif text-[#2c2c2c] leading-tight font-light px-4">
             Sign up to our newsletter to receive
             <span className="italic text-[#3a472b]"> special moments before anyone else.</span>
           </h2>

@@ -10,8 +10,8 @@ const VisualShowcase: React.FC = () => {
           {/* Left Column: Text + Interior */}
           <div className="lg:col-span-5 space-y-12">
             <div className="space-y-6">
-              <h2 className="text-white text-3xl md:text-5xl serif tracking-wider uppercase leading-tight">
-                Discover the Flavours <br />
+              <h2 className="text-white text-2xl md:text-4xl lg:text-5xl serif tracking-wider uppercase leading-tight">
+                Discover the Flavours <br className="hidden lg:block" />
                 Of The Mediterranean
               </h2>
               <p className="text-white/60 text-sm md:text-base leading-relaxed font-light max-w-md">

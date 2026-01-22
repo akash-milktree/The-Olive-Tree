@@ -44,8 +44,8 @@ const EventsGrid: React.FC = () => {
       {/* Header Section */}
       <div className="w-full mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-2">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl serif text-[#2c2c2c] leading-tight">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl serif text-[#2c2c2c] leading-tight px-4 md:px-0">
               Experience <br />
               <span className="italic text-[#53663e]">moments at The Olive Tree</span>
             </h2>

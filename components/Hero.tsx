@@ -39,12 +39,12 @@ const Hero: React.FC = () => {
           <DiamondIcon />
         </div>
 
-        <h2 className="text-4xl md:text-6xl lg:text-7xl text-white serif mb-6 leading-tight">
+        <h2 className="text-4xl md:text-5xl lg:text-7xl text-white serif mb-6 leading-tight">
           A Taste of the <br className="hidden md:block" />
           <span className="italic">Mediterranean</span>
         </h2>
 
-        <p className="text-sm md:text-lg text-white/90 font-light tracking-wide mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-sm md:text-base lg:text-lg text-white/90 font-light tracking-wide mb-10 max-w-2xl mx-auto leading-relaxed px-4">
           Experience warm hospitality and traditional family recipes in our sun-drenched Southampton bistro. From fresh seafood to hand-picked olives, every dish tells a story.
         </p>
 
