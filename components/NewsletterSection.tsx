@@ -48,7 +48,7 @@ const NewsletterSection: React.FC = () => {
           WebkitMaskComposite: 'destination-in'
         }}
       >
-        <div className="max-w-2xl mx-auto text-center space-y-12">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="flex justify-center">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#3a472b]">
               <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5L12 2Z" fill="currentColor" />
@@ -56,8 +56,8 @@ const NewsletterSection: React.FC = () => {
           </div>
 
           <h2 className="text-3xl md:text-5xl lg:text-5xl serif text-[#2c2c2c] leading-tight font-light">
-            Sign up to our newsletter to receive <br />
-            <span className="italic text-[#3a472b]">special moments before anyone else.</span>
+            Sign up to our newsletter to receive
+            <span className="italic text-[#3a472b]"> special moments before anyone else.</span>
           </h2>
 
           <form className="space-y-10 text-left">
